@@ -57,6 +57,12 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
