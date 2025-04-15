@@ -21,6 +21,7 @@ const myLibrary = [
 
 document.addEventListener("DOMcontentLoaded", displayBooks());
 
+
 // Book constructor
 function Book(title, author, pages, read) {
   this.title = title;
