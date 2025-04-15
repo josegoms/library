@@ -1,3 +1,6 @@
+const myLibrary = [];
+
+// Book constructor
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -12,6 +15,23 @@ function Book(title, author, pages, read) {
   }
 }
 
-const book = new Book("The Hobbit", "J.R.R Tolkien", "295", false);
+function addBook (title, author, pages, read) {
+    //Call book constructor and add to a variable
+    const book = new Book(title, author, pages, read);
 
-console.log(book.info());
+    //Add unique ID
+    book.id = crypto.randomUUID();
+
+    //Append it to array
+    myLibrary.push(book);
+}
+
+
+// Capture each book and display it on screen
+function displayBooks () {
+
+    //Loop through array
+    for (book of myLibrary) {
+        
+    }
+}
