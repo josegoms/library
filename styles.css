@@ -69,6 +69,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  margin-right: 18rem;
 }
 
 .forms {
@@ -79,9 +80,14 @@ body {
   padding: 1rem;
 
   background: linear-gradient(135deg, #2ecc71, #14532d);
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.3);
   color: white;
   min-height: 100vh;
   margin: 0;
+
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 form > div {

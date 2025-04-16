@@ -16,6 +16,132 @@ const myLibrary = [
         author: "F. Scott Fitzgerald",
         pages: "180",
         read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+      title: "Harry Potter",
+      author: "J. K. Rowling",
+      pages: "500",
+      read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
+    },
+    {
+        title: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: "500",
+        read: "Yes"
+    },
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        pages: "300",
+        read: "No"
+    },
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        pages: "180",
+        read: "Yes"
     }
 ];
 
