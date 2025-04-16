@@ -1,151 +1,23 @@
-const myLibrary = [
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-      title: "Harry Potter",
-      author: "J. K. Rowling",
-      pages: "500",
-      read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: "500",
-        read: "Yes"
-    },
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        pages: "300",
-        read: "No"
-    },
-    {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        pages: "180",
-        read: "Yes"
-    }
-];
+const myLibrary = [];
 
-document.addEventListener("DOMcontentLoaded", displayBooks());
+const formsData = document.querySelector("form");
+
+formsData.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(event.target);
+  const title = formData.get("title");
+  const author = formData.get("author");
+  const pages = formData.get("pages");
+  const read = formData.get("read");
+
+  //Call function
+  addBook(title, author, pages, read);
+
+  //Reset forms
+  form.reset();
+});
 
 
 // Book constructor
@@ -154,21 +26,13 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.info = function() {
-    if (read === true) {
-      return `${title} by ${author}, ${pages}, already read.`
-    } else {
-      return `${title} by ${author}, ${pages} pages, not read yet.`
-    }
-  }
+  this.id = crypto.randomUUID();
+
 }
 
 function addBook (title, author, pages, read) {
     //Call book constructor and add to a variable
     const book = new Book(title, author, pages, read);
-
-    //Add unique ID
-    book.id = crypto.randomUUID();
 
     //Append it to array
     myLibrary.push(book);
@@ -181,6 +45,7 @@ function addBook (title, author, pages, read) {
 // Capture each book and display it on screen
 function displayBooks () {
     const tbody = document.querySelector("tbody");
+    tbody.innerHTML = "";
 
     //Loop through array
     myLibrary.forEach((book) => {
@@ -199,6 +64,10 @@ function displayBooks () {
 
       const dataRead = document.createElement("td");
       dataRead.textContent = book.read;
+
+      const dataDelete = document.createElement("td");
+      dataDelete.value = book.id;
+      dataDelete.textContent = "🗑";
 
       //Append
       row.appendChild(dataTitle);
