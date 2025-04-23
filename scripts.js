@@ -22,17 +22,16 @@ formsData.addEventListener("submit", (event) => {
   form.reset();
 });
 
-
-// Book constructor
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.id = crypto.randomUUID();
-
+//Book class
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.id = crypto.randomUUID();
+  }
 }
-
 function addBook (title, author, pages, read) {
     //Call book constructor and add to a variable
     const book = new Book(title, author, pages, read);
@@ -43,7 +42,6 @@ function addBook (title, author, pages, read) {
     //Display
     displayBooks();
 }
-
 
 // Capture each book and display it on screen
 function displayBooks () {
